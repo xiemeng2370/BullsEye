@@ -105,8 +105,8 @@ class ViewController: UIViewController {
     func updateLabels() {
         //text value type is string, so convert targetValue type from int to string; targetLabel.text = "\(targetValue)"
         targetLabel.text = String(targetValue)
-        scoreLabel.text = String(score)
-        roundLabel.text = String(round)
+        scoreLabel.text = "Score: " + String(score)
+        roundLabel.text = "Round: " + String(round)
     }
 
 }
