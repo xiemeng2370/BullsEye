@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,90 +22,87 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 999999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VVx-ge-S9c">
-                                <rect key="frame" x="150" y="464.33333333333326" width="115.33333333333331" height="24.666666666666686"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
-                                <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="5cd-rv-Ay8">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 999999" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VVx-ge-S9c">
+                                <rect key="frame" x="54" y="54" width="145" height="32"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Round: 999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PwY-Yd-AqC">
-                                <rect key="frame" x="161" y="520.33333333333348" width="92.666666666666657" height="24.666666666666629"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
-                                <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Round: 999" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PwY-Yd-AqC">
+                                <rect key="frame" x="247" y="54" width="113" height="32"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="poT-OS-Yil">
-                                <rect key="frame" x="164.66666666666666" y="619" width="85" height="37"/>
-                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
+                                <rect key="frame" x="157" y="518" width="100" height="35"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="18"/>
                                 <state key="normal" title="Start Over">
-                                    <color key="titleColor" red="1" green="0.38039215686274508" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="startOver" destination="BYZ-38-t0r" eventType="touchUpInside" id="sgY-76-wFH"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Put the Bull's Eye as close as you can to:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Uh-0M-Us2">
-                                <rect key="frame" x="42.000000000000227" y="132" width="328.00000000000006" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
-                                <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Put the Bull's Eye as close as you can to:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Uh-0M-Us2">
+                                <rect key="frame" x="43" y="146" width="328" height="56"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="haU-VL-6di">
-                                <rect key="frame" x="172" y="176" width="69" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="30"/>
-                                <color key="textColor" red="1" green="0.38039215686274508" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="haU-VL-6di">
+                                <rect key="frame" x="157" y="222" width="100" height="61"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="45"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" red="1" green="0.38039215686274508" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="shadowColor" white="0.0" alpha="0.20154644691780821" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="4" height="4"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Q0S-dH-JrJ">
-                                <rect key="frame" x="63.333333333333599" y="269" width="264.99999999999994" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="1" green="0.3803921569" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <action selector="sliderMoved:" destination="BYZ-38-t0r" eventType="valueChanged" id="Lbx-ti-zsp"/>
-                                </connections>
-                            </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5C9-ts-h36">
-                                <rect key="frame" x="46.333333333333599" y="273" width="11.000000000000071" height="20.999999999999957"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5C9-ts-h36">
+                                <rect key="frame" x="43" y="371" width="13" height="26"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uly-LA-RNi">
-                                <rect key="frame" x="338.33333333333348" y="273.99999999999989" width="29.000000000000028" height="21.000000000000028"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uly-LA-RNi">
+                                <rect key="frame" x="331" y="371" width="40" height="26"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sb5-vs-vSL">
-                                <rect key="frame" x="194.66666666666666" y="54" width="25" height="25"/>
+                                <rect key="frame" x="194" y="661" width="25" height="25"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="OdB-kz-Poe"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="cIU-qf-aZ2"/>
                                     <constraint firstAttribute="width" constant="25" id="emZ-5r-ED1"/>
                                     <constraint firstAttribute="height" constant="25" id="lVY-Cw-TwS"/>
                                 </constraints>
-                                <color key="tintColor" red="1" green="0.3803921569" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal">
-                                    <color key="titleColor" red="1" green="0.38039215686274508" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="P1q-mw-fbp" kind="presentation" modalTransitionStyle="partialCurl" id="UbS-8d-Fpf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FKz-Kn-0K4">
-                                <rect key="frame" x="132" y="370.66666666666669" width="150" height="37"/>
-                                <color key="backgroundColor" red="1" green="0.38039215686274508" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FKz-Kn-0K4">
+                                <rect key="frame" x="132" y="463" width="150" height="35"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="NdY-q9-JUe"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="18"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="titleShadowOffset" width="-2" height="-2"/>
                                 <state key="normal" title="HIT ME">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="1" green="0.3803921569" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" red="1" green="0.3803921569" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -115,19 +113,39 @@
                                     <action selector="showAlert" destination="BYZ-38-t0r" eventType="touchUpInside" id="b5t-Ys-Txm"/>
                                 </connections>
                             </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Q0S-dH-JrJ">
+                                <rect key="frame" x="57" y="333" width="300" height="31"/>
+                                <color key="tintColor" red="1" green="0.3803921569" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="sliderMoved:" destination="BYZ-38-t0r" eventType="valueChanged" id="Lbx-ti-zsp"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="VVx-ge-S9c" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1R1-aE-rjU"/>
-                            <constraint firstItem="VVx-ge-S9c" firstAttribute="top" secondItem="FKz-Kn-0K4" secondAttribute="bottom" constant="56.666666666666742" id="7Uv-RC-iTi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uly-LA-RNi" secondAttribute="trailing" constant="23" id="3np-lF-ws7"/>
+                            <constraint firstItem="7Uh-0M-Us2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="23" id="8Fp-Z1-aGb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7Uh-0M-Us2" secondAttribute="trailing" constant="23" id="8lb-ZH-3cF"/>
+                            <constraint firstItem="haU-VL-6di" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="137" id="9NI-uo-kp3"/>
                             <constraint firstItem="FKz-Kn-0K4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="C5V-ob-Xtu"/>
-                            <constraint firstItem="PwY-Yd-AqC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EoC-xQ-kmp"/>
-                            <constraint firstItem="Sb5-vs-vSL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="34" id="JJh-7g-jGm"/>
+                            <constraint firstItem="VVx-ge-S9c" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="34" id="Dln-zu-YNr"/>
+                            <constraint firstItem="5C9-ts-h36" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="23" id="DpT-DQ-jpv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="haU-VL-6di" secondAttribute="trailing" constant="137" id="EOB-9U-GYi"/>
+                            <constraint firstItem="PwY-Yd-AqC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="34" id="Hsc-Fj-99m"/>
+                            <constraint firstItem="poT-OS-Yil" firstAttribute="top" secondItem="FKz-Kn-0K4" secondAttribute="bottom" constant="20" id="Llm-Lx-b4S"/>
+                            <constraint firstItem="FKz-Kn-0K4" firstAttribute="top" secondItem="Q0S-dH-JrJ" secondAttribute="bottom" constant="100" id="PhK-hc-qcK"/>
+                            <constraint firstItem="uly-LA-RNi" firstAttribute="top" secondItem="Q0S-dH-JrJ" secondAttribute="bottom" constant="8" id="Sjq-1b-PlY"/>
                             <constraint firstItem="Sb5-vs-vSL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VhM-y9-QrU"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PwY-Yd-AqC" secondAttribute="bottom" constant="191" id="dxo-pH-BQm"/>
+                            <constraint firstItem="7Uh-0M-Us2" firstAttribute="top" secondItem="PwY-Yd-AqC" secondAttribute="bottom" constant="60" id="YzF-2I-d2e"/>
+                            <constraint firstItem="Q0S-dH-JrJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="39" id="e6m-Xv-zpD"/>
+                            <constraint firstItem="5C9-ts-h36" firstAttribute="top" secondItem="Q0S-dH-JrJ" secondAttribute="bottom" constant="8" id="eO6-QC-MUP"/>
+                            <constraint firstItem="Q0S-dH-JrJ" firstAttribute="top" secondItem="haU-VL-6di" secondAttribute="bottom" constant="50" id="hxO-4Q-vEl"/>
+                            <constraint firstItem="VVx-ge-S9c" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="34" id="j1l-LO-V4j"/>
+                            <constraint firstItem="haU-VL-6di" firstAttribute="top" secondItem="7Uh-0M-Us2" secondAttribute="bottom" constant="20" id="k6J-HB-5ZU"/>
                             <constraint firstItem="poT-OS-Yil" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kI5-kt-8yE"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VVx-ge-S9c" secondAttribute="bottom" constant="247" id="w4w-nM-vvq"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="poT-OS-Yil" secondAttribute="bottom" constant="80" id="zlV-YB-v1Q"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PwY-Yd-AqC" secondAttribute="trailing" constant="34" id="n9Y-ai-Rw9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Q0S-dH-JrJ" secondAttribute="trailing" constant="39" id="uiG-4h-lVL"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Sb5-vs-vSL" secondAttribute="bottom" constant="50" id="wmG-rV-mhC"/>
                         </constraints>
                     </view>
                     <connections>
@@ -153,10 +171,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background_about" translatesAutoresizingMaskIntoConstraints="NO" id="85x-dd-aUr">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zIh-y0-WXn">
-                                <rect key="frame" x="179" y="472" width="57" height="36"/>
-                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
-                                <state key="normal" title="GOT IT">
+                                <rect key="frame" x="183" y="675" width="48" height="41"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
+                                <state key="normal" title="BACK">
                                     <color key="titleColor" red="1" green="0.3803921569" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -164,23 +186,22 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cHd-f0-mfO">
-                                <rect key="frame" x="63" y="103" width="289" height="330"/>
+                                <rect key="frame" x="62" y="150" width="290" height="330"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">-- Bull's Eye --
+                                <string key="text">Bull's Eye
 
 Welcome to the awesome game of Bull's Eye where you can win points and fame by dragging a slider.  Your goal is to place the slider as close as possible to the target value. The closer you are, the more points you score. Enjoy!
 
 Meng</string>
-                                <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="zIh-y0-WXn" firstAttribute="centerX" secondItem="56S-N0-Rv6" secondAttribute="centerX" id="VMQ-KQ-crZ"/>
-                            <constraint firstItem="WK9-Lh-Ogy" firstAttribute="top" secondItem="zIh-y0-WXn" secondAttribute="bottom" constant="228" id="rxa-jF-eC6"/>
+                            <constraint firstItem="zIh-y0-WXn" firstAttribute="centerX" secondItem="56S-N0-Rv6" secondAttribute="centerX" id="i6w-8c-Krv"/>
+                            <constraint firstItem="WK9-Lh-Ogy" firstAttribute="top" secondItem="zIh-y0-WXn" secondAttribute="bottom" constant="20" id="rxa-jF-eC6"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -189,4 +210,8 @@ Meng</string>
             <point key="canvasLocation" x="740.57971014492762" y="22.826086956521742"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background" width="360" height="640"/>
+        <image name="background_about" width="360" height="640"/>
+    </resources>
 </document>
